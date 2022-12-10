@@ -1,4 +1,31 @@
-const container = document.getElementById('container');
+document.addEventListener('DOMContentLoaded', function() {
+    createGrid(16)
+    console.log('hi')
+});
+
+function createGrid(size) {
+    let grid = document.querySelector('.grid');
+    
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    let numberDivs = size * size;
+
+    for(let c = 0; c < numberDivs; c++) {
+        let div = document.createElement('div');
+        grid.insertAdjacentElement('beforeend', div);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* const container = document.getElementById('container');
 
 function makeRows(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
@@ -11,7 +38,7 @@ function makeRows(rows, cols) {
     }
 }
 
-makeRows(16,16);
+makeRows(16,16); */
 
 
 
