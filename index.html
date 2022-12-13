@@ -14,13 +14,14 @@
         <h6>Select the size of the Grid</h6>
         <button class="btn btn-primary" id="popup">Select</button>
     </div>
+    <p id="message"></p>
     <div class="grid" id="container">
         
     </div>
     <div class="footer">
-        <button class="btn btn-dark">Black</button>
-        <button class="btn btn-secondary">Random</button>
-        <button class="btn btn-light">Reset</button>
+        <button class="btn btn-dark" onclick="setColor('black')">Black</button>
+        <button class="btn btn-secondary" onclick="setColor('random')">Random</button>
+        <button class="btn btn-light" onclick="resetGrid()">Reset</button>
     </div>
 
     
